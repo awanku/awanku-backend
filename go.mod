@@ -5,7 +5,6 @@ go 1.14
 replace github.com/asasmoyo/pq-hansip => ./lib/pq-hansip
 
 require (
-	cloud.google.com/go v0.61.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20200428143746-21a406dcc535 // indirect
 	github.com/asasmoyo/pq-hansip v0.0.0-20190502052219-d515e288ee85
 	github.com/bradleyfalzon/ghinstallation v1.1.1
@@ -25,10 +24,7 @@ require (
 	github.com/stretchr/testify v1.6.1
 	github.com/swaggo/swag v1.6.7
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
-	golang.org/x/sys v0.0.0-20200722175500-76b94024e4b6 // indirect
-	golang.org/x/tools v0.0.0-20200724022722-7017fd6b1305 // indirect
-	google.golang.org/api v0.29.0
-	google.golang.org/genproto v0.0.0-20200722002428-88e341933a54 // indirect
+	google.golang.org/api v0.30.0
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
 )
