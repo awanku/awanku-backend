@@ -1,0 +1,29 @@
+version: '3'
+services:
+  core-api:
+    build:
+      context: .
+      dockerfile: ./docker/Development.dockerfile
+    working_dir: /app/core-api
+    command: make run-dev
+    stop_grace_period: 1s
+    ports:
+      - 80:3000
+    environment:
+      ENVIRONMENT: development
+      DATABASE_URL: postgres://awanku:rahasia@maindb/awanku?sslmode=disable
+      OAUTH_SECRET_KEY: randomstringhere
+      GITHUB_APP_ID: 73537
+      GITHUB_APP_PRIVATE_KEY_PATH: credentials/githubapp-dev.private-key.pem
+      GITHUB_APP_INSTALL_URL: https://github.com/apps/awanku-development/installations/new
+    volumes:
+      - .:/app/core-api
+      - gopath:/go
+  maindb:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: awanku
+      POSTGRES_USER: awanku
+      POSTGRES_PASSWORD: rahasia
+volumes:
+  gopath: {}

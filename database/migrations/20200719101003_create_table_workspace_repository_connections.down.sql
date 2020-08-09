@@ -1,0 +1,1 @@
+drop table workspace_repository_connections;

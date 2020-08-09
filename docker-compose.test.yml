@@ -1,0 +1,23 @@
+version: '3'
+services:
+  core-api:
+    build:
+      context: .
+      dockerfile: ./docker/Test.dockerfile
+    working_dir: /app/core-api
+    environment:
+      OWNER_DB_URL: postgres://awanku:rahasia@postgres-main/awanku
+      DB_HOST: postgres-main
+    volumes:
+      - .:/app/core-api
+      - gopath:/go
+  postgres-main:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: awanku
+      POSTGRES_USER: awanku
+      POSTGRES_PASSWORD: rahasia
+    volumes:
+      - .:/app/core-api
+volumes:
+  gopath: {}
