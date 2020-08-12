@@ -17,7 +17,7 @@ require (
 	github.com/go-openapi/spec v0.19.9 // indirect
 	github.com/go-openapi/swag v0.19.9 // indirect
 	github.com/go-ozzo/ozzo-validation/v4 v4.2.1
-	github.com/go-pg/pg/v9 v9.1.6
+	github.com/go-pg/pg/v9 v9.1.7
 	github.com/go-pg/urlstruct v0.5.1 // indirect
 	github.com/golang-migrate/migrate/v4 v4.12.2
 	github.com/google/go-github/v29 v29.0.3 // indirect
